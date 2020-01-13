@@ -28,9 +28,8 @@ class App extends Component {
   };
 
   deleteBookmark = bookmarkId => {
-    const newBookmarks = this.state.bookmarks.filter(
-      bm => bm.id !== bookmarkId
-    );
+    console.log(bookmarkId, typeof bookmarkId);
+    const newBookmarks = this.state.bookmarks.filter(bm => bm.id != bookmarkId);
     this.setState({
       bookmarks: newBookmarks
     });
